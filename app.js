@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 // 👇 Yahan apni link add karo:
-const targetLink = 'YOUR_LINK_HERE';
+const targetLink = 'https://assuagequit.com/jypccuvfu?key=43447dfd110af3f34cd1463209230c0f';
 
 app.get('/', (req, res) => {
   res.redirect(targetLink);
