@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+
+  <!-- 👇 Yahan apni link add karo -->
+  <meta http-equiv="refresh" content="0; url=YOUR_LINK_HERE" />
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+  <h2>Redirecting...</h2>
+  <p>If you are not redirected automatically, <a id="link" href="#">click here</a>.</p>
+
+  <script>
+    // 👇 Yahan bhi apni link add karo
+    const target = "YOUR_LINK_HERE";
+    document.getElementById("link").href = target;
+    window.location.href = target;
+  </script>
+</body>
+</html>
