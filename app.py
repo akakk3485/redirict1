@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return '✅ Redirect API is live! Use /redirect?to=YOUR_URL'
+    return '✅ Redirect API is live! Use /redirect?to=https://assuagequit.com/jypccuvfu?key=43447dfd110af3f34cd1463209230c0f'
 
 @app.route('/redirect')
 def go():
