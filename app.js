@@ -1,11 +1,28 @@
-const express = require('express');
+import express from "express";
 const app = express();
 
-// 👇 Yahan apni link add karo:
-const targetLink = 'https://assuagequit.com/jypccuvfu?key=43447dfd110af3f34cd1463209230c0f';
+// ✅ Redirect route
+app.get("/redirect", (req, res) => {
+  const { to } = req.query;
 
-app.get('/', (req, res) => {
-  res.redirect(targetLink);
+  if (!to) {
+    return res.status(400).send("❌ Missing ?to= parameter");
+  }
+
+  // Sirf safe links (http/https)
+  if (!/^https?:\/\//.test(to)) {
+    return res.status(400).send("❌ Invalid URL (must start with http/https)");
+  }
+
+  console.log(`➡️ Redirecting to: ${to}`);
+  res.redirect(302, to);
 });
 
-app.listen(3000, () => console.log('✅ Redirect server running on port 3000'));
+// ✅ Root route (info)
+app.get("/", (req, res) => {
+  res.send("✅ Redirect API Active — Use /redirect?to=https://example.com");
+});
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`🚀 Server running on port ${process.env.PORT || 3000}`);
+});
