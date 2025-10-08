@@ -1,0 +1,4 @@
+redirect-api/
+ ┣ app.py
+ ┣ requirements.txt
+ ┗ wasmer.toml
