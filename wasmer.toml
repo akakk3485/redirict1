@@ -4,8 +4,8 @@ version = "1.0.0"
 
 [command]
 name = "start"
-runner = "node"
-command = "node app.js"
+runner = "docker"
+command = "Dockerfile"
 
 [env]
 PORT = "3000"
