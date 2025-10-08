@@ -1,0 +1,11 @@
+[package]
+name = "redirect-api"
+version = "1.0.0"
+
+[command]
+name = "start"
+runner = "node"
+command = "node app.js"
+
+[env]
+PORT = "3000"
